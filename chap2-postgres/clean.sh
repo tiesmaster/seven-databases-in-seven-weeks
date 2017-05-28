@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker rmi seven-ch2-psql
+docker rmi seven/ch2-psql
