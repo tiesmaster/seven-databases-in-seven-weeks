@@ -13,3 +13,14 @@ FROM events e JOIN venues v
 SELECT e.title, v.name
 FROM events e LEFT JOIN venues v
   ON e.venue_id = v.venue_id;
+
+# 
+SELECT e.title, co.country_name
+FROM events e
+INNER JOIN venues v
+  ON e.venue_id = v.venue_id
+INNER JOIN cities ci
+  ON v.postal_code=ci.postal_code AND v.country_code=ci.country_code
+INNER JOIN countries co
+  ON ci.country_code = co.country_code
+WHERE e.title = 'Larp Club';
