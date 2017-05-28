@@ -32,7 +32,7 @@ CREATE TABLE venues (
     postal_code varchar(9),
     country_code char(2),
     FOREIGN KEY (country_code, postal_code)
-    REFERENCES cities (country_code, postal_code) MATCH FULL;
+    REFERENCES cities (country_code, postal_code) MATCH FULL
 );
 
 INSERT INTO venues (name, postal_code, country_code)
